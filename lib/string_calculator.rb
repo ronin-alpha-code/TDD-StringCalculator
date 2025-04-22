@@ -1,5 +1,6 @@
 class StringCalculator
   def self.add(string)
-    ### All conditions will go here.
+    ## Condition 1: If the string is empty, return 0.
+    return 0 if string.empty?
   end
 end

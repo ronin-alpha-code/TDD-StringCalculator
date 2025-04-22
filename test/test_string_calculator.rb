@@ -17,4 +17,16 @@ class TestStringCalculator < Minitest::Test
     assert_equal 5, StringCalculator.add("2,3")
     assert_equal 7, StringCalculator.add("3,4")
   end
+
+  def test_multiple_numbers_separated_by_comma_returns_sum
+    assert_equal 6, StringCalculator.add("1,2,3")
+    assert_equal 10, StringCalculator.add("2,3,5")
+    assert_equal 46, StringCalculator.add("3,4,8,7,9,4,5,6")
+  end
+
+  def test_string_with_new_line_delimeter
+    assert_equal 6, StringCalculator.add("1\n2,3")
+    assert_equal 10, StringCalculator.add("2\n3,5")
+    assert_equal 46, StringCalculator.add("3\n4,8,7,9,4,5,6")
+  end
 end

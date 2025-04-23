@@ -25,7 +25,7 @@ class TestStringCalculator < Minitest::Test
   end
 
   def test_string_with_new_line_delimeter
-    assert_equal 6, StringCalculator.add("1\n2,3")
+    assert_equal 6, StringCalculator.add("1,2\n3")
     assert_equal 10, StringCalculator.add("2\n3,5")
     assert_equal 46, StringCalculator.add("3\n4,8,7,9,4,5,6")
   end

@@ -14,7 +14,7 @@ This project implements a String Calculator using Test-Driven Development (TDD) 
 
 1. **Clone the Repository**:
   ```bash
-  git clone /home/abhishek-jaiswal/Desktop/work/StringCalculator
+  git clone https://github.com/ronin-alpha-code/TDD-StringCalculator.git
   cd StringCalculator
   ```
 

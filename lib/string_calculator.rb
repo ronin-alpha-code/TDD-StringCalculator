@@ -7,10 +7,9 @@ class StringCalculator
     string = string.gsub(/\s+/, ",")
     numbers = string.split(",")
     numbers.each do |num|
+      raise "Negatives not allowed" if num.to_i < 0
       sum += num.to_i
     end
     sum
   end
 end
-
-puts StringCalculator.add("1\n2,3")

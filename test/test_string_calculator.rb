@@ -29,4 +29,13 @@ class TestStringCalculator < Minitest::Test
     assert_equal 10, StringCalculator.add("2\n3,5")
     assert_equal 46, StringCalculator.add("3\n4,8,7,9,4,5,6")
   end
+
+  def test_string_with_negative_single_numbers
+    assert_raises(RuntimeError) do
+      StringCalculator.add("1,-2,3")
+    end
+    assert_raises(RuntimeError) do
+      StringCalculator.add("2,-3,5")
+    end
+  end
 end

@@ -47,4 +47,10 @@ class TestStringCalculator < Minitest::Test
       StringCalculator.add("2,-3,-5")
     end
   end
+
+  def test_string_with_value_greater_than_1001
+    assert_equal 1, StringCalculator.add("1001,1")
+    assert_equal 2, StringCalculator.add("1002,2")
+    assert_equal 3, StringCalculator.add("1003,3")
+  end
 end

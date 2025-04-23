@@ -38,4 +38,13 @@ class TestStringCalculator < Minitest::Test
       StringCalculator.add("2,-3,5")
     end
   end
+
+  def test_string_with_multiple_negative_numbers
+    assert_raises(RuntimeError) do
+      StringCalculator.add("1,-2,-3")
+    end
+    assert_raises(RuntimeError) do
+      StringCalculator.add("2,-3,-5")
+    end
+  end
 end

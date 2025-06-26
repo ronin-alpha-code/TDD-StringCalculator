@@ -41,9 +41,7 @@ The `test` directory includes the following test cases:
 - Supporting new line delimiter or any white spave (e.g., `"1\n2,3"` returns `6`).
 - Validating input and raising exceptions for invalid formats. (e.g., `"-1,2,3"` retruns `Negatives Not Allowed.`)
 - Skips the number greater than 1000. (e.g., `"1001,2"` returns `2`)
+- Handling of custom delimiter (e.g., `"//;\n1;2\n3"` returns `6`).
 
 
 Refer to the `test/string_calculator_spec.rb` file for detailed test scenarios.
-
-## Note
-`Custom Delimeters are not covered.`

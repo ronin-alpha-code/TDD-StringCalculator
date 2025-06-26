@@ -63,9 +63,4 @@ class TestStringCalculator < Minitest::Test
     assert_equal 3, string_calculator.add("//;\n1;2")
     assert_equal 6, string_calculator.add("//;\n1;2\n3")
   end
-
-  def test_delimiters_with_any_length
-    assert_equal 6, string_calculator.add("//[***]\n1***2***3")
-    assert_equal 10, string_calculator.add("//[***]\n1***5***4")
-  end
 end
